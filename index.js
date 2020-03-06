@@ -15,11 +15,11 @@ function MiCamera(log, config) {
 	this.token = config.token;
 
 	if (!this.ip) {
-		throw new Error('Your must provide IP address of the camera.');
+		throw new Error('You must provide the IP address of the camera. miio --discover --sync');
 	}
 
 	if (!this.token) {
-		throw new Error('Your must provide token of the camera.');
+		throw new Error('You must provide the token of the camera. Run miio --discover --sync');
 	}
 
 	this.service = new Service.Switch(this.name);
